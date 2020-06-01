@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassB.Models.User
+namespace ClassB.Models.Users
 {
     public class UserCreate
     {

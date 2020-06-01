@@ -1,11 +1,12 @@
 ﻿using ClassB.Data;
-using ClassB.Models.User;
-using CodeB.Models;
+using ClassB.Models.Users;
+using ClassB.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using ClassB.Models.Users;
 
 namespace ClassB.Services
 {

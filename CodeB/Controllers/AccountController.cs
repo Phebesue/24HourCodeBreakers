@@ -16,6 +16,7 @@ using Microsoft.Owin.Security.OAuth;
 using CodeB.Models;
 using CodeB.Providers;
 using CodeB.Results;
+using ClassB.Data;
 
 namespace CodeB.Controllers
 {

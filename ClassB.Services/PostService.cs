@@ -1,6 +1,6 @@
 ﻿using ClassB.Data;
 using ClassB.Models.Post;
-using CodeB.Models;
+using ClassB.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +21,7 @@ namespace ClassB.Services
             var entity =
                 new Post()
                 {
-                    OwnerId = _userId,
+                    UserId = _userId,
                     Title = model.Title,
                     PostText = model.PostText,
                     CreatedUtc = DateTimeOffset.Now
@@ -37,7 +37,7 @@ namespace ClassB.Services
             using (var ctx = new ApplicationDbContext())
             {
                 var query = ctx.Posts
-                    .Where(e => e.OwnerId == _userId)
+                    .Where(e => e.UserId == _userId)
                     .Select(
                     e =>
                     new PostListItem
