@@ -10,6 +10,7 @@ using Microsoft.Owin.Security.OAuth;
 using Owin;
 using CodeB.Providers;
 using CodeB.Models;
+using ClassB.Data;
 
 namespace CodeB
 {

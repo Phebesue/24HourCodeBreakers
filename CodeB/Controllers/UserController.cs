@@ -1,5 +1,6 @@
-﻿using ClassB.Models.User;
+﻿using ClassB.Models.Users;
 using ClassB.Services;
+using Microsoft.AspNet.Identity;
 using System;
 using System.Collections.Generic;
 using System.Linq;
