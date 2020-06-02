@@ -1,15 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassB.Models.Users
+namespace ClassB.Models
 {
-    public class UserCreate
+    public class UserListItem
     {
-        [Required]
+        public Guid UserId { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
     }
