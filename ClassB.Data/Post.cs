@@ -25,16 +25,17 @@ namespace ClassB.Data
         [Display(Name = "Post Contents")]
         public string PostText { get; set; }
 
-        [Required]
+       // [Required]
         public User PostAuthor { get; set; }
 
         [Required]
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
         //  public DateTimeOffset ModifiedUtc { get; set; }
+
         [ForeignKey("Author")]
-        [Required]
-        public Guid UserId { get; set; }
+       // [Required]
+        public Guid? UserId { get; set; }
         public virtual User Author { get; set; }
     }
 }

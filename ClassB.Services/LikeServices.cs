@@ -20,6 +20,7 @@ namespace ClassB.Services
             var entity =
                 new Like()
                 {
+                    LikeId = model.LikeId,
                     UserId = _userId,
                     Comment = model.Comment,
                     Post = model.Post,
