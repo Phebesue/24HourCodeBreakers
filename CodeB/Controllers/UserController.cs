@@ -1,4 +1,4 @@
-﻿using ClassB.Models.Users;
+﻿using ClassB.Models;
 using ClassB.Services;
 using Microsoft.AspNet.Identity;
 using System;

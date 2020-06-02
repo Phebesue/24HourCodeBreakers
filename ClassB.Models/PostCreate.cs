@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassB.Models.Post
+namespace ClassB.Models
 {
     public class PostCreate
     {

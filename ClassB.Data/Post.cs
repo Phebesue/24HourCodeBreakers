@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,10 +12,6 @@ namespace ClassB.Data
     {
         [Key]
         public int PostId { get; set; }
-
-
-        [Required]
-        public Guid UserId { get; set; }
 
         [Required]
         [MinLength(2, ErrorMessage = "Please enter at least 2 characters.")]
@@ -35,5 +32,9 @@ namespace ClassB.Data
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
         //  public DateTimeOffset ModifiedUtc { get; set; }
+        [ForeignKey("Author")]
+        [Required]
+        public Guid UserId { get; set; }
+        public virtual User Author { get; set; }
     }
 }

@@ -1,5 +1,4 @@
 ﻿using ClassB.Data;
-using ClassB.Models.Post;
 using ClassB.Models;
 using System;
 using System.Collections.Generic;

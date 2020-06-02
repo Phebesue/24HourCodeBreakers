@@ -1,4 +1,4 @@
-﻿using ClassB.Models.Post;
+﻿using ClassB.Models;
 using ClassB.Services;
 using Microsoft.AspNet.Identity;
 using System;

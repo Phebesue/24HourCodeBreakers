@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ClassB.Models.Post
+namespace ClassB.Models
 {
     public class PostListItem
     {
@@ -18,6 +18,5 @@ namespace ClassB.Models.Post
         public User Author { get; set; }
         [Display(Name = "Created")]
         public DateTimeOffset CreatedUtc { get; set; }
-
     }
 }

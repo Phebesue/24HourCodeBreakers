@@ -10,31 +10,26 @@ using System.Web.Http;
 
 namespace CodeB.Controllers
 {
-    [Authorize]
-    public class CommentController : ApiController
+    public class LikeController : ApiController
     {
-        private CommentService CreateCommentService()
+        private LikeService CreateLikeService()
         {
             var userId = Guid.Parse(User.Identity.GetUserId());
-            var noteService = new CommentService(userId);
-            return noteService;
+            return new LikeService(userId);
         }
         public IHttpActionResult Get()
         {
-            CommentService commentService = CreateCommentService();
-            var notes = commentService.GetComments();
-            return Ok(notes);
+            LikeService likeService = CreateLikeService();
+            var likes = likeService.GetLikes();
+            return Ok(likes);
         }
-        public IHttpActionResult Post(CommentCreate note)
+        public IHttpActionResult Like(LikeCreate like)
         {
             if (!ModelState.IsValid)
                 return BadRequest(ModelState);
-
-            var service = CreateCommentService();
-
-            if (!service.CreateComment(note))
+            var service = CreateLikeService();
+            if (!service.CreateLike(like))
                 return InternalServerError();
-
             return Ok();
         }
     }
