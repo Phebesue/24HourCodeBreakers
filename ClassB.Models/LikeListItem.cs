@@ -9,6 +9,7 @@ namespace ClassB.Models
 {
     public class LikeListItem
     {
+        public int LikeId { get; set; }
         public User Author { get; set; }
         public Post Post { get; set; }
         public Comment Comment { get; set; }

@@ -18,7 +18,7 @@ namespace ClassB.Data
         [Required]
         public Guid UserId { get; set; }
         public virtual User Author { get; set; }
-        [ForeignKey("PostId")]
+        [ForeignKey("CommentPost")]
         [Required]
         public int PostId { get; set; }
         public virtual Post CommentPost { get; set; }
